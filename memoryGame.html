@@ -1,0 +1,23 @@
+<head>
+    <link rel="stylesheet" href="memory.css">
+    <script type="text/javascript" src="memory.js" async></script>
+</head>
+
+<body>
+    <div id="title">Memory game</div>
+    <div class="menu" id="mainMenu" >
+        <p>Select size:</p>
+        <div class="slidecontainer">
+            <input type="range" min="3" max="5" value="3" class="slider" id="slider" size="9">
+            <p><span id="sizeOutput">3*3</span></p>
+            <button id="start">Start</button>
+        </div>
+    </div>    
+    <div class="menu" id="gameMenu" hidden="true">
+        <button id="reload" onClick="window.location.reload()">Main Menu</button>
+        <button id="reset" onClick="setUpGame()">Reset Game</button>
+        <p>Time:<span id="time1"></span></p>
+    </div>
+    
+    <div class="grid-container" id="field" hidden="true"></div>
+</body>
