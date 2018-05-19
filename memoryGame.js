@@ -17,7 +17,7 @@ document.getElementById("start").addEventListener("click", function(){
   document.getElementById("mainMenu").hidden = true;
   document.getElementById("gameMenu").hidden = false;
   document.getElementById("field").hidden = false;
-  setField();
+  setUpField();
   setUpGame();
 });
 
@@ -65,7 +65,7 @@ function reset() {
   clickedCells = [];
 }
 
-function setField() {
+function setUpField() {
   for (let i=0; i<fieldSize; i++) {
     document.querySelector('.grid-container').innerHTML += '<button class="grid-item" id="'+i+'"></button>';
   }
@@ -78,9 +78,6 @@ function setUpGame() {
   let playerGuesses = 0;
 
   reset();
-
-  //use line18 in html (onClick="setUpGame()") or this below
-  //document.getElementById("reset").addEventListener("click", setUpGame, false);
 
   for (let i = 0; i < grid.length; i++) {
     let cell = grid[i];
